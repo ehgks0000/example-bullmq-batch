@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  redis:
+    image: redis:alpine
+    command: redis-server --port 6379 --maxmemory-policy noeviction
+    container_name: test-bull
+    hostname: rf
+    restart: always
+    labels:
+      - "name=redis"
+      - "mode=standalone"
+    ports:
+      - 6379:6379

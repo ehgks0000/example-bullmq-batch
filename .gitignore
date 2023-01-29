@@ -1,0 +1,4 @@
+node_modules
+*.webp
+*.png
+dist
